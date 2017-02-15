@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Twitch Streamers</title>
+
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+
+<body ng-app="twitchApp">
+    <div class="container container-fluid" ng-controller="twitchController">
+        <header>
+            <nav>
+                <div class="row nav-bar">
+                    <img src="assets/twitch-logo.jpg" alt="twitch logo" class="image-responsive logo">
+                    <form class="selection-form">
+                        <div class="filter-selection">
+                            <input type="radio" value="Offline" name="selection"> Offline
+                        </div>
+                        <div class="filter-selection">
+                            <input type="radio" value="Online" name="selection"> Online
+                        </div>
+                        <div class="filter-selection">
+                            <input type="radio" value="All" name="selection" checked> All
+                        </div>
+                    </form>
+                </div>
+            </nav>
+        </header>
+
+        <div class="main-container">
+
+        </div>
+    </div>
+</body>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-resource.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+
+<script src="js/app.js"></script>
+<script src="js/twitchController.js"></script>
+
+</html>
