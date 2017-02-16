@@ -25,3 +25,12 @@
     padding-right: 20px;
     float: right;
 }
+
+.stream-container {
+    margin-top: 30px;
+}
+
+.stream-container .stream-thumbnail {
+    width: 100%;
+    /*height: 360px;*/
+}

@@ -9,6 +9,7 @@ twitchApp.controller('twitchController', ['$scope', '$http', 'twitchService', fu
         $scope.channels.forEach(function(channel) {
             twitchService.getStreams(channel).then(function(data) {
                 var streamingData = data.data.stream;
+                console.log(data.data);
                 if(streamingData !== null) {
                     $scope.streams.push({
                         name: streamingData.channel.display_name,

@@ -5,6 +5,7 @@ twitchApp.directive('streamer', function() {
         replace: true,
         scope: {
             stream: '=',
+            fallbackBanner: '=',
         }
     }
 });
