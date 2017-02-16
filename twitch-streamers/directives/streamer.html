@@ -1,10 +1,26 @@
 <div class="col-sm-6">
     <div class="stream-container">
         <div class="thumbnail-container">
-            <img ng-src="{{ stream.details.streamPreview.large || fallbackBanner }}" class="img-thumbnail stream-thumbnail" />
-            <a ng-href="{{ stream.details.streamingUrl}}" target="_blank">
+            <img ng-src="{{ stream.details.streamPreview.large || fallbackBanner }}" class="img-thumbnail stream-thumbnail" ng-class="{'saturated-banner': stream.status === 'error'}" />
+            <a ng-href="{{ stream.details.streamingUrl}}" target="_blank" ng-show="stream.message === undefined">
                 <i class="glyphicon glyphicon-play-circle play-icon"></i>
             </a>
+            <h3 ng-show="stream.message !== undefined" class="text-center">{{ stream.message }}</h3>
+        </div>
+    </div>
+    <div class="info-container">
+        <div class="text-center">
+            <a ng-href="{{ stream.details.streamingUrl}}" target="_blank">
+                <p>
+                    {{ stream.name }}
+                    <span ng-show="stream.details.currentStreaming !== undefined">
+                        &mdash; {{ stream.details.currentStreaming }}
+                    </span>
+                </p>
+            </a>
+        </div>
+        <div class="text-center viewer-info">
+            <i class="glyphicon glyphicon-eye-open"></i> &nbsp; {{ stream.details.viewer }}
         </div>
     </div>
 </div>

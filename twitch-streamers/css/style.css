@@ -43,9 +43,22 @@
     font-size: 200%;
 }
 
-.stream-container .thumbnail-container a {
+.stream-container .thumbnail-container a,
+.stream-container .thumbnail-container h3 {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.stream-container .thumbnail-container h3 {
+    margin: 0;
+}
+
+.viewer-info {
+    margin-top: -10px;
+}
+
+.saturated-banner {
+    opacity: 0.5;
 }

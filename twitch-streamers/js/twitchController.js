@@ -40,7 +40,8 @@ twitchApp.controller('twitchController', ['$scope', '$http', 'twitchService', fu
                         } else {
                             $scope.streams.push({
                                 name: channel,
-                                status: 'error'
+                                status: 'error',
+                                message: 'This user account does not exist or has been removed'
                             });
                         }
 
