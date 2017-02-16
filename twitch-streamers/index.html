@@ -32,7 +32,11 @@
         </header>
 
         <div class="main-container">
-
+            <div ng-repeat="stream in streams">
+                <div class="row">
+                    <streamer stream="stream"></streamer>
+                </div>
+            </div>
         </div>
     </div>
 </body>
@@ -44,5 +48,6 @@
 <script src="js/app.js"></script>
 <script src="js/twitchController.js"></script>
 <script src="js/twitchService.js"></script>
+<script src="directives/streamer.js"></script>
 
 </html>
