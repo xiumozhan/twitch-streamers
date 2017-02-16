@@ -56,7 +56,7 @@
 }
 
 .viewer-info {
-    margin-top: -10px;
+    margin-top: -5px;
 }
 
 .saturated-banner {
@@ -69,4 +69,14 @@
     margin-right: 2.5%;
     margin-left: 2.5%;
     float: left;
+}
+
+.img-responsive {
+    display: inline-block;
+    max-height: 50px;
+}
+
+.streamer-logo {
+    border-radius: 50%;
+    border: 3px solid #6441a5;
 }
