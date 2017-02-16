@@ -62,3 +62,10 @@
 .saturated-banner {
     opacity: 0.5;
 }
+
+.streamer-container {
+    display: inline-block;
+    width: 40%;
+    margin-left: 5%;
+    float: left;
+}

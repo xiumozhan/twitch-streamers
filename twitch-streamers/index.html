@@ -31,9 +31,9 @@
             </nav>
         </header>
 
-        <div class="main-container">
-            <div ng-repeat="stream in streams">
-                <div class="row">
+        <div class="row">
+            <div class="col-sm-12">
+                <div ng-repeat="stream in streams">
                     <streamer stream="stream" fallback-banner="'assets/offline-banner.jpg'"></streamer>
                 </div>
             </div>
