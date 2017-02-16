@@ -13,12 +13,18 @@ twitchApp.controller('twitchController', ['$scope', '$http', 'twitchService', fu
         Offline: 'offline'
     };
 
-    $scope.filterChannels = function(status) {
+    $scope.filterChannels = function() {
         $scope.streams = [];
         $scope.loadStreamData($scope.selected);
     };
 
+    $scope.$watch('selected', function(newSelection, oldSelection) {
+        console.log(newSelection, oldSelection);
+        $scope.filterChannels();
+    });
+
     $scope.loadStreamData = function(selection) {
+        console.log(selection);
         $scope.channels.forEach(function(channel) {
             twitchService.getStreams(channel).then(function(data) {
                 var streamingData = data.data.stream;
@@ -72,7 +78,5 @@ twitchApp.controller('twitchController', ['$scope', '$http', 'twitchService', fu
             });
         });
     };
-
-    $scope.loadStreamData($scope.selected);
 
 }]);
