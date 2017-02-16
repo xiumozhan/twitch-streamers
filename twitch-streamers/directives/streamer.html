@@ -2,7 +2,7 @@
     <div class="stream-container">
         <div class="thumbnail-container">
             <img ng-src="{{ stream.details.streamPreview.large || fallbackBanner }}" class="img-thumbnail stream-thumbnail" />
-            <a ng-href="{{ stream.details.streamingUrl || fallbackUrl }}" target="_blank">
+            <a ng-href="{{ stream.details.streamingUrl}}" target="_blank">
                 <i class="glyphicon glyphicon-play-circle play-icon"></i>
             </a>
         </div>

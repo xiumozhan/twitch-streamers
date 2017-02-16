@@ -13,5 +13,13 @@ twitchApp.service('twitchService', ['$http', '$sce', function($http, $sce) {
             url: $sce.trustAsResourceUrl('https://wind-bow.gomix.me/twitch-api/streams/' + stream)
         };
         return $http(request);
+    };
+
+    this.getUsers = function(user) {
+        var request = {
+            method: 'jsonp',
+            url: $sce.trustAsResourceUrl('https://wind-bow.gomix.me/twitch-api/users/' + user)
+        };
+        return $http(request);
     }
 }]);
